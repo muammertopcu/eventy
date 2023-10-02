@@ -3,7 +3,7 @@ import {Image, Text, TouchableWithoutFeedback, View} from 'react-native';
 import styles from './EventCard.style';
 import {Event} from '@types';
 
-interface EventCardProps {
+export interface EventCardProps {
   data: Event;
   onSelect: () => void;
 }
