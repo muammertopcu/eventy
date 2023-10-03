@@ -1,14 +1,14 @@
 {
   "Tur": "TİYATRO",
   "Id": 1000,
-  "Adi": "TEST_NAME",
+  "Adi": "EVENT_NAME",
   "EtkinlikBitisTarihi": "2023-04-23T12:00:00",
-  "KucukAfis": "TEST_POSTER",
-  "EtkinlikMerkezi": "TEST_LOCATION",
-  "KisaAciklama": "TEST_DESCRIPTION",
-  "BiletSatisLinki": "TEST_TICKET_LINK",
+  "KucukAfis": "https://via.placeholder.com/150",
+  "EtkinlikMerkezi": "EVENT_LOCATION",
+  "KisaAciklama": "Ipsum minim nostrud nulla ipsum deserunt sint sint aliqua do veniam mollit mollit. Excepteur enim irure in qui proident velit deserunt in aute consequat officia veniam ut. Consequat officia ea eu esse esse aute nisi laboris occaecat et ex.",
+  "BiletSatisLinki": "https://www.github.com/muammertopcu",
   "UcretsizMi": true,
-  "Resim": "TEST_IMAGE",
+  "Resim": "https://via.placeholder.com/150",
   "EtkinlikUrl": "TEST_URL_HEADER",
   "EtkinlikBaslamaTarihi": "2023-04-23T10:00:00"
 }

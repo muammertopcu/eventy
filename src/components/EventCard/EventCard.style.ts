@@ -20,7 +20,7 @@ const styles = StyleSheet.create({
   name: {
     marginTop: 5,
   },
-  freebadge_container: {
+  freeBadgeContainer: {
     position: 'absolute',
     top: '10%',
     left: -3,
@@ -30,7 +30,21 @@ const styles = StyleSheet.create({
     borderTopRightRadius: 5,
     borderBottomRightRadius: 5,
   },
-  freebadge_title: {
+  freeBadgeTitle: {
+    color: '#FFF',
+    fontWeight: 'bold',
+  },
+  genreBadgeContainer: {
+    position: 'absolute',
+    bottom: '20%',
+    right: -3,
+    backgroundColor: '#8E24AA',
+    padding: 3,
+    paddingHorizontal: 10,
+    borderTopLeftRadius: 5,
+    borderBottomLeftRadius: 5,
+  },
+  genreBadgeTitle: {
     color: '#FFF',
     fontWeight: 'bold',
   },

@@ -9,8 +9,14 @@ export interface EventCardProps {
 }
 
 const FreeBadge = () => (
-  <View style={styles.freebadge_container} testID={'event-card-free-bade'}>
-    <Text style={styles.freebadge_title}>Free</Text>
+  <View style={styles.freeBadgeContainer} testID={'event-card-free-bade'}>
+    <Text style={styles.freeBadgeTitle}>Free</Text>
+  </View>
+);
+
+const GenreBadge = ({genre}: {genre: string}) => (
+  <View style={styles.genreBadgeContainer} testID={'event-card-genre-bade'}>
+    <Text style={styles.genreBadgeTitle}>{genre}</Text>
   </View>
 );
 
@@ -23,6 +29,7 @@ const EventCard = ({data, onSelect}: EventCardProps) => {
         <Image style={styles.image} source={{uri: data.KucukAfis}} />
         <Text style={styles.name}>{data.Adi}</Text>
         {data.UcretsizMi && <FreeBadge />}
+        <GenreBadge genre={data.Tur} />
       </View>
     </TouchableWithoutFeedback>
   );
