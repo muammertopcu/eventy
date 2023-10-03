@@ -1,15 +1,23 @@
 import React from 'react';
-import {fireEvent, render} from '@testing-library/react-native';
+import {fireEvent, render, waitFor} from '@testing-library/react-native';
 import SearchBar from './SearchBar';
 
 describe('SearchCard unit test', () => {
-  it('should trigger onSearch when typed', () => {
+  it('should trigger onSearch when typed', async () => {
     const mockOnSearch = jest.fn();
-    const wrapper = render(<SearchBar onSearch={mockOnSearch} />);
+    const wrapper = render(
+      <SearchBar onSearch={mockOnSearch} debounce={250} />,
+    );
     const input = wrapper.getByTestId('search-input');
 
     fireEvent(input, 'onChangeText', 'test');
-    expect(mockOnSearch).toBeCalledWith('test');
+
+    await waitFor(
+      () => {
+        expect(mockOnSearch).toBeCalledWith('test');
+      },
+      {timeout: 300},
+    );
   });
 
   it('should render icon by default', () => {

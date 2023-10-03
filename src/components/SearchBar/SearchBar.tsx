@@ -18,7 +18,9 @@ const SearchBar = ({
   debounce = 250,
   lineless = false,
 }: SearchBarProps) => {
-  const debounced = useDebouncedCallback(value => onSearch(value), debounce);
+  const debounced = useDebouncedCallback(value => {
+    !!onSearch && onSearch(value);
+  }, debounce);
 
   return (
     <View
