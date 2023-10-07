@@ -12,8 +12,11 @@
     "storybook-watch": "sb-rn-watcher"
   },
   "dependencies": {
+    "@react-navigation/native": "^6.1.8",
+    "@react-navigation/native-stack": "^6.9.14",
     "react": "18.2.0",
     "react-native": "0.72.5",
+    "react-native-screens": "^3.25.0",
     "use-debounce": "^9.0.4"
   },
   "devDependencies": {
