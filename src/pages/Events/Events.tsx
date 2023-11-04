@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import {FlatList, ListRenderItem, SafeAreaView} from 'react-native';
-import {EventCard, SearchBar} from '@components';
+import {Error, EventCard, Loading, SearchBar} from '@components';
 import type {Event} from '@types';
 import {
   NavigationProp,
@@ -12,7 +12,7 @@ import {useGetEventsQuery} from '../../redux/api/events';
 export default function Events() {
   const navigation = useNavigation<NavigationProp<ParamListBase>>();
   const [eventList, setEventList] = useState<Event[] | undefined>();
-  const {data, isLoading, refetch} = useGetEventsQuery('');
+  const {data, isLoading, isError, refetch} = useGetEventsQuery('');
 
   useEffect(() => {
     setEventList(data);
@@ -31,6 +31,14 @@ export default function Events() {
 
     setEventList(filteredEvents);
   };
+
+  if (isLoading) {
+    return <Loading />;
+  }
+
+  if (isError) {
+    return <Error />;
+  }
 
   return (
     <SafeAreaView>
