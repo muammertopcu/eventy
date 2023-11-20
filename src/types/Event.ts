@@ -1,5 +1,7 @@
+import {EventType} from '@types';
+
 export interface Event {
-  Tur: EventTypes;
+  Tur: EventType;
   Id: number;
   Adi: string;
   EtkinlikBitisTarihi: string;
@@ -12,5 +14,3 @@ export interface Event {
   EtkinlikUrl: string;
   EtkinlikBaslamaTarihi: string;
 }
-
-export type EventTypes = 'TİYATRO' | 'KONSER' | 'DİĞER' | 'SİNEMA' | 'SERGİ';

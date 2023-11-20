@@ -7,7 +7,7 @@ import {
   ParamListBase,
   useNavigation,
 } from '@react-navigation/native';
-import {useGetEventsQuery} from '../../redux/api/events';
+import {useGetEventsQuery} from '@redux/api/events';
 
 export default function Events() {
   const navigation = useNavigation<NavigationProp<ParamListBase>>();
@@ -18,10 +18,11 @@ export default function Events() {
     setEventList(data);
   }, [data]);
 
-  const handleEventSelect = () => navigation.navigate('EventDetail');
+  const handleEventSelect = (id: number) =>
+    navigation.navigate('EventDetail', {id});
 
   const renderEvent: ListRenderItem<Event> = ({item}) => (
-    <EventCard data={item} onSelect={handleEventSelect} />
+    <EventCard data={item} onSelect={() => handleEventSelect(item.Id)} />
   );
 
   const searchEvents = (search: string) => {

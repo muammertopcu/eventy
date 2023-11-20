@@ -8,6 +8,8 @@ module.exports = {
           '@types': './src/types',
           '@components': './src/components',
           '@pages': './src/pages',
+          '@redux': './src/redux',
+          '@utils': './src/utils',
         },
       },
     ],

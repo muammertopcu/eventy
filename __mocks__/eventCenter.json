@@ -1,0 +1,13 @@
+{
+  "Id": 1,
+  "Hakkinda": "test_description",
+  "Iletisim": "test_contact",
+  "Telefon": "test_phone",
+  "Adres": "test_address",
+  "Resim": "test_image",
+  "Ulasim": "test_transport",
+  "Adi": "test_name",
+  "Aciklama": "test_description",
+  "KoordinatX": "test_lat",
+  "KoordinatY": "test_lng"
+}
